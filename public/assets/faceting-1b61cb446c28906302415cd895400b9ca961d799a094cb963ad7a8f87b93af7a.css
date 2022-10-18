@@ -1,0 +1,77 @@
+/* line 1, app/assets/stylesheets/faceting.scss */
+.search-filter-sidebar {
+  background-color: #efefef;
+  padding: 5px;
+  padding-top: 10px;
+  border: 1px solid #cdcdcd;
+}
+
+/* line 8, app/assets/stylesheets/faceting.scss */
+div.reset-filter-button {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* line 13, app/assets/stylesheets/faceting.scss */
+div.form-button {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+/* line 18, app/assets/stylesheets/faceting.scss */
+.filter {
+  border: 1px #cdcdcd solid;
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: white;
+  margin-right: 1px;
+}
+
+/* line 26, app/assets/stylesheets/faceting.scss */
+.filter-title {
+  font-weight: bold;
+}
+
+/* line 31, app/assets/stylesheets/faceting.scss */
+.filter-values ul.selected a, .filter-values ul.selectable a {
+  text-decoration: none;
+}
+
+/* line 34, app/assets/stylesheets/faceting.scss */
+.filter-values ul.selected a:hover, .filter-values ul.selectable a:hover {
+  text-decoration: underline;
+}
+
+/* line 39, app/assets/stylesheets/faceting.scss */
+.filter-values ul.selected {
+  border: 1px #efefef solid;
+  background-color: #efefef;
+  padding-left: 20px;
+  list-style-type: square;
+}
+
+/* line 44, app/assets/stylesheets/faceting.scss */
+.filter-values ul.selected a::after {
+  content: '[x]';
+  margin-left: 5px;
+  color: #800000;
+}
+
+/* line 51, app/assets/stylesheets/faceting.scss */
+.filter-values ul.selectable {
+  overflow: scroll;
+  background-color: white;
+  padding-left: 20px;
+  list-style-type: square;
+}
+
+/* line 56, app/assets/stylesheets/faceting.scss */
+.filter-values ul.selectable li a {
+  color: #555555;
+  font-size: 90%;
+}
+
+/* line 62, app/assets/stylesheets/faceting.scss */
+.tech-search-result-card {
+  margin-top: 10px;
+}

@@ -1,0 +1,29 @@
+/* line 1, app/assets/stylesheets/graphVis.scss */
+div#dependency-graph-svg-div {
+  text-align: center;
+}
+
+/* line 5, app/assets/stylesheets/graphVis.scss */
+.link {
+  fill: white;
+  stroke: #ccc !important;
+  stroke-width: 1.5px !important;
+}
+
+/* line 11, app/assets/stylesheets/graphVis.scss */
+circle {
+  fill: white;
+  stroke: white;
+  stroke-width: 0px;
+}
+
+/* line 20, app/assets/stylesheets/graphVis.scss */
+text {
+  text-anchor: middle;
+  /*pointer-events: none;*/
+}
+
+/* line 36, app/assets/stylesheets/graphVis.scss */
+text a:hover, text a:active {
+  text-decoration: underline;
+}

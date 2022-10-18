@@ -1,0 +1,67 @@
+/* line 1, app/assets/stylesheets/tables.scss */
+th.actions, td.actions {
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* line 7, app/assets/stylesheets/tables.scss */
+table, tr {
+  border: 1px #efefef solid;
+  width: 100%;
+}
+
+/* line 12, app/assets/stylesheets/tables.scss */
+th, td {
+  vertical-align: top;
+  padding: 5px;
+  border: 1px #efefef solid;
+  /*font-size: 90%;*/
+}
+
+/* line 19, app/assets/stylesheets/tables.scss */
+td.expand-to-fit-available-space {
+  width: 100%;
+}
+
+/* line 23, app/assets/stylesheets/tables.scss */
+td.no-wrap {
+  white-space: nowrap;
+}
+
+/* line 27, app/assets/stylesheets/tables.scss */
+th {
+  font-weight: bold;
+  color: #555555;
+  white-space: nowrap;
+}
+
+/* line 34, app/assets/stylesheets/tables.scss */
+table.invisible-layout-table {
+  border: none;
+  width: auto;
+}
+
+/* line 39, app/assets/stylesheets/tables.scss */
+table.invisible-layout-table tr, table.invisible-layout-table td {
+  border: none;
+  font-size: 100%;
+}
+
+/* line 45, app/assets/stylesheets/tables.scss */
+td.field-name {
+  text-align: right;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* line 51, app/assets/stylesheets/tables.scss */
+td.field-value {
+  width: 100%;
+}
+
+/* line 55, app/assets/stylesheets/tables.scss */
+td.number {
+  text-align: right;
+  font-family: Courier, monospace;
+  font-size: 110%;
+}
