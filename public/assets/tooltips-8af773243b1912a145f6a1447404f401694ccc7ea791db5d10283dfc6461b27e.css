@@ -1,0 +1,25 @@
+/* line 1, app/assets/stylesheets/tooltips.scss */
+.hover-over {
+  position: relative;
+  display: inline-block;
+}
+
+/* line 6, app/assets/stylesheets/tooltips.scss */
+.hover-over .hover-over-text {
+  visibility: hidden;
+  white-space: normal;
+  background-color: lightyellow;
+  color: #555;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #cdcdcd;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 1%;
+}
+
+/* line 20, app/assets/stylesheets/tooltips.scss */
+.hover-over:hover .hover-over-text {
+  visibility: visible;
+}

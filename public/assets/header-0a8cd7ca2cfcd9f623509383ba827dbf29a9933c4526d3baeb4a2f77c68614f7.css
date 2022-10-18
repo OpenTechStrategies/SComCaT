@@ -1,0 +1,117 @@
+/* line 1, app/assets/stylesheets/header.scss */
+div.site-header-message {
+  text-align: center;
+  border: 2px solid #cdcdcd;
+  background-color: yellow;
+}
+
+/* line 9, app/assets/stylesheets/header.scss */
+a.site-header, a.site-header:hover, a.site-header:visited {
+  text-decoration: none;
+  color: #555555;
+}
+
+/* line 14, app/assets/stylesheets/header.scss */
+div.site-header {
+  font-weight: bold;
+  font-size: 250%;
+}
+
+/* line 20, app/assets/stylesheets/header.scss */
+div.site-sub-header {
+  font-size: 85%;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* line 26, app/assets/stylesheets/header.scss */
+div.site-header-row {
+  margin-bottom: 10px;
+}
+
+/* line 30, app/assets/stylesheets/header.scss */
+div#navbar-scomcat {
+  margin-bottom: 10px;
+  background-color: #efefef;
+  border-bottom: 5px solid #cdcdcd;
+}
+
+/* line 36, app/assets/stylesheets/header.scss */
+div#navbar-system-icons {
+  padding: 5px;
+  float: right;
+}
+
+/* line 41, app/assets/stylesheets/header.scss */
+img#header-logo {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 10px;
+}
+
+/* line 47, app/assets/stylesheets/header.scss */
+div#header-text a {
+  text-decoration: none;
+  color: #555555;
+}
+
+/* line 52, app/assets/stylesheets/header.scss */
+div#header-login-col {
+  text-align: right;
+}
+
+/* line 56, app/assets/stylesheets/header.scss */
+nav.navbar-scomcat {
+  /*margin: 0px;*/
+  padding: 0px;
+}
+
+/* line 61, app/assets/stylesheets/header.scss */
+a.nav-link, a.nav-link:visited {
+  color: #555555 !important;
+  text-decoration: none !important;
+}
+
+/* line 66, app/assets/stylesheets/header.scss */
+a.nav-link:hover {
+  text-decoration: underline !important;
+}
+
+/* line 70, app/assets/stylesheets/header.scss */
+li.nav-item-selected {
+  /*font-weight: bold;*/
+  background-color: #cdcdcd;
+}
+
+/* line 75, app/assets/stylesheets/header.scss */
+li.nav-item {
+  font-weight: bold;
+}
+
+/* line 79, app/assets/stylesheets/header.scss */
+.dropdown-item {
+  font-size: 13px;
+}
+
+/*img.site-banner {
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-bottom: 2px;
+  width: 100%;
+}*/
+/* line 90, app/assets/stylesheets/header.scss */
+img.header-icon {
+  max-height: 30px;
+  max-width: 30px;
+  float: right;
+  margin-left: 4px;
+  padding: 0px;
+}
+
+/* line 98, app/assets/stylesheets/header.scss */
+div#site-strapline {
+  font-style: italic;
+  padding-left: 5px;
+  padding-bottom: 3px;
+  font-size: 150%;
+}

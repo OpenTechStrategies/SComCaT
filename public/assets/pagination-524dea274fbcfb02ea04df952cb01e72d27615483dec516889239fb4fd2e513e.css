@@ -1,0 +1,33 @@
+/* line 1, app/assets/stylesheets/pagination.scss */
+.scomcat-pagination {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: default;
+}
+
+/* line 6, app/assets/stylesheets/pagination.scss */
+.scomcat-pagination a, .scomcat-pagination span {
+  padding: 3px;
+}
+
+/* line 9, app/assets/stylesheets/pagination.scss */
+.scomcat-pagination a {
+  text-decoration: none;
+}
+
+/* line 12, app/assets/stylesheets/pagination.scss */
+.scomcat-pagination a:hover, .scomcat-pagination a:focus {
+  text-decoration: underline;
+}
+
+/* line 15, app/assets/stylesheets/pagination.scss */
+.scomcat-pagination .disabled {
+  color: #aaaaaa;
+}
+
+/* line 18, app/assets/stylesheets/pagination.scss */
+.scomcat-pagination .current {
+  font-style: normal;
+  font-weight: bold;
+}

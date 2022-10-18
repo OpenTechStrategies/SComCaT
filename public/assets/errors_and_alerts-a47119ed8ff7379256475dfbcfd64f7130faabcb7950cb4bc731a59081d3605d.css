@@ -1,0 +1,37 @@
+/* line 1, app/assets/stylesheets/errors_and_alerts.scss */
+#notice {
+  color: green;
+}
+
+/* line 5, app/assets/stylesheets/errors_and_alerts.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 11, app/assets/stylesheets/errors_and_alerts.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+/* line 19, app/assets/stylesheets/errors_and_alerts.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+/* line 29, app/assets/stylesheets/errors_and_alerts.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

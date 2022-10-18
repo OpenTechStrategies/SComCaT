@@ -1,0 +1,70 @@
+/* line 4, app/assets/stylesheets/main.scss */
+html {
+  background-color: white;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 2%;
+}
+
+/* line 11, app/assets/stylesheets/main.scss */
+body {
+  background-color: white;
+  color: #555555;
+}
+
+/* line 16, app/assets/stylesheets/main.scss */
+body, p, ol, ul, td {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #555555;
+}
+
+/* line 23, app/assets/stylesheets/main.scss */
+a, a:visited, a:hover {
+  color: #23527c;
+}
+
+/* line 27, app/assets/stylesheets/main.scss */
+a, a:visited {
+  text-decoration: underline;
+}
+
+/* line 31, app/assets/stylesheets/main.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 35, app/assets/stylesheets/main.scss */
+a.title-link {
+  text-decoration: none;
+}
+
+/* line 39, app/assets/stylesheets/main.scss */
+a.title-link:hover {
+  text-decoration: underline;
+}
+
+/* line 43, app/assets/stylesheets/main.scss */
+blockquote {
+  font-style: italic;
+  margin-left: 20px;
+  padding-left: 10px;
+  margin-right: 20px;
+  border-left: 3px solid #cdcdcd;
+}
+
+/* line 51, app/assets/stylesheets/main.scss */
+.page-title {
+  text-align: center;
+  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
+  padding-bottom: 3px;
+  color: #555555;
+  background-color: #eeeeee;
+}
+
+/* line 60, app/assets/stylesheets/main.scss */
+div.right-aligned {
+  text-align: right;
+}

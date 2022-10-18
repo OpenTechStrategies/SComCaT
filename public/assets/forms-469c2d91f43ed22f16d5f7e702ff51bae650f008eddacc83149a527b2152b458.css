@@ -1,0 +1,26 @@
+/* line 1, app/assets/stylesheets/forms.scss */
+textarea, input[type=text], input[type=email], input[type=password] {
+  width: 100%;
+}
+
+/* line 5, app/assets/stylesheets/forms.scss */
+textarea {
+  color: #555555;
+  border: .5px solid #cdcdcd;
+}
+
+/* line 10, app/assets/stylesheets/forms.scss */
+div.actions {
+  text-align: center;
+}
+
+/* line 16, app/assets/stylesheets/forms.scss */
+a.btn {
+  text-decoration: none;
+  color: white !important;
+}
+
+/* line 21, app/assets/stylesheets/forms.scss */
+.editorial-comment-field {
+  background-color: #ffdf7e;
+}
