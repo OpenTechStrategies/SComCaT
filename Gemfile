@@ -3,34 +3,35 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # ruby '2.5.3'
 #
-gem 'rubyzip'
+gem 'rubyzip', '~>2.3.0'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
-gem 'haml-rails', '~>2.0.1'
-gem 'friendly_id', '~>5.3.0'
-gem 'acts-as-taggable-on', '~>6.5.0'
-gem 'devise','~>4.7.1'
-gem 'pundit','~>2.1.0'
+gem 'haml-rails', '~>2.1.0'
+gem 'friendly_id', '~>5.5.0'
+gem 'acts-as-taggable-on', '~>9.0.1'
+gem 'devise','~>4.8.1'
+gem 'pundit','~>2.2.0'
 # gem 'backup', '~>5.0.0.beta.2'
-gem "audited", "~> 4.9"
-gem "pg"
+gem "audited", "~> 5.0.2"
+# gem "pg" #No longer used - SQLite used instead
 gem 'tzinfo-data'
 gem 'rails_autolink'
 gem 'forty_facets'
-gem 'will_paginate', '~> 3.1.0'
-gem 'sequel'# (only for migrating data between sqlite and postgress)
+gem 'will_paginate', '~> 3.3.1'
+# gem 'sequel'# (only for migrating data between sqlite and postgress)
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-# gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
-# Use sqlite3 as the database for Active Record
+gem 'rails', '>=7.0.4'
+# Use sqlite3 as the database for Activ
+# e Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
-gem 'ffi', git: 'https://github.com/ffi/ffi.git' #TEMP WORKAROUND
+# gem 'ffi', git: 'https://github.com/ffi/ffi.git' #TEMP WORKAROUND
+gem 'ffi', '1.15.5'
 # gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
