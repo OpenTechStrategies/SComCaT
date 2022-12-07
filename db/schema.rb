@@ -2,39 +2,35 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# This file is the source Rails uses to define your schema when running `rails
-# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
+# This file is the source Rails uses to define your schema when running `bin/rails
+# db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
 # be faster and is potentially less error prone than running all of your
 # migrations from scratch. Old migrations may fail to apply correctly if those
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[6.1].define(version: 2021_05_04_093108) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "adoption_levels", id: :bigint, default: nil, force: :cascade do |t|
+ActiveRecord::Schema[7.0].define(version: 2022_12_07_081116) do
+  create_table "adoption_levels", force: :cascade do |t|
     t.string "name", limit: 255
     t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "slug", limit: 255
     t.text "editorial"
     t.index ["slug"], name: "index_adoption_levels_on_slug", unique: true
   end
 
-  create_table "assignments", id: :bigint, default: nil, force: :cascade do |t|
+  create_table "assignments", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "role_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["role_id"], name: "index_assignments_on_role_id"
     t.index ["user_id"], name: "index_assignments_on_user_id"
   end
 
-  create_table "audits", id: :bigint, default: nil, force: :cascade do |t|
+  create_table "audits", force: :cascade do |t|
     t.bigint "auditable_id"
     t.string "auditable_type", limit: 255
     t.bigint "associated_id"
@@ -48,7 +44,7 @@ ActiveRecord::Schema[6.1].define(version: 2021_05_04_093108) do
     t.string "comment", limit: 255
     t.string "remote_address", limit: 255
     t.string "request_uuid", limit: 255
-    t.datetime "created_at"
+    t.datetime "created_at", precision: nil
     t.index ["associated_type", "associated_id"], name: "associated_index"
     t.index ["auditable_type", "auditable_id", "version"], name: "auditable_index"
     t.index ["created_at"], name: "index_audits_on_created_at"
@@ -56,21 +52,21 @@ ActiveRecord::Schema[6.1].define(version: 2021_05_04_093108) do
     t.index ["user_id", "user_type"], name: "user_index"
   end
 
-  create_table "business_forms", id: :bigint, default: nil, force: :cascade do |t|
+  create_table "business_forms", force: :cascade do |t|
     t.string "name", limit: 255
     t.text "description"
     t.string "slug", limit: 255
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.text "editorial"
     t.index ["slug"], name: "index_business_forms_on_slug", unique: true
   end
 
-  create_table "categories", id: :bigint, default: nil, force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "name", limit: 255
     t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "slug", limit: 255
     t.text "editorial"
     t.index ["slug"], name: "index_categories_on_slug", unique: true
@@ -83,7 +79,7 @@ ActiveRecord::Schema[6.1].define(version: 2021_05_04_093108) do
     t.index ["technology_id", "category_id"], name: "index_cat_tech_1", unique: true
   end
 
-  create_table "collections", id: :bigint, default: nil, force: :cascade do |t|
+  create_table "collections", force: :cascade do |t|
     t.text "name"
     t.text "description"
     t.text "slug"
@@ -100,7 +96,7 @@ ActiveRecord::Schema[6.1].define(version: 2021_05_04_093108) do
     t.index ["technology_id", "collection_id"], name: "index_coll_tech_1", unique: true
   end
 
-  create_table "dependencies", id: :bigint, default: nil, force: :cascade do |t|
+  create_table "dependencies", force: :cascade do |t|
     t.bigint "technology_id", null: false
     t.bigint "dependee_id", null: false
     t.text "created_at", null: false
@@ -111,19 +107,19 @@ ActiveRecord::Schema[6.1].define(version: 2021_05_04_093108) do
   end
 
   create_table "editorial_states", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "slug"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "name", limit: 255
+    t.string "description", limit: 255
+    t.string "slug", limit: 255
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["slug"], name: "index_editorial_states_on_slug", unique: true
   end
 
-  create_table "functions", id: :bigint, default: nil, force: :cascade do |t|
+  create_table "functions", force: :cascade do |t|
     t.string "name", limit: 255
     t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "slug", limit: 255
     t.text "editorial"
     t.index ["slug"], name: "index_functions_on_slug", unique: true
@@ -136,54 +132,54 @@ ActiveRecord::Schema[6.1].define(version: 2021_05_04_093108) do
     t.index ["technology_id", "function_id"], name: "index_func_tech_1", unique: true
   end
 
-  create_table "governances", id: :bigint, default: nil, force: :cascade do |t|
+  create_table "governances", force: :cascade do |t|
     t.string "name", limit: 255
     t.text "description"
     t.string "slug", limit: 255
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.text "editorial"
     t.index ["slug"], name: "index_governances_on_slug", unique: true
   end
 
-  create_table "readiness_levels", id: :bigint, default: nil, force: :cascade do |t|
+  create_table "readiness_levels", force: :cascade do |t|
     t.string "name", limit: 255
     t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "slug", limit: 255
     t.text "editorial"
     t.index ["slug"], name: "index_readiness_levels_on_slug", unique: true
   end
 
-  create_table "roles", id: :bigint, default: nil, force: :cascade do |t|
+  create_table "roles", force: :cascade do |t|
     t.string "name", limit: 255
     t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "slug", limit: 255
     t.text "editorial"
     t.index ["slug"], name: "index_roles_on_slug", unique: true
   end
 
-  create_table "statuses", id: :bigint, default: nil, force: :cascade do |t|
+  create_table "statuses", force: :cascade do |t|
     t.string "name", limit: 255
     t.text "description"
     t.string "slug", limit: 255
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.text "editorial"
     t.index ["slug"], name: "index_statuses_on_slug", unique: true
   end
 
-  create_table "taggings", id: :bigint, default: nil, force: :cascade do |t|
+  create_table "taggings", force: :cascade do |t|
     t.bigint "tag_id"
     t.string "taggable_type", limit: 255
     t.bigint "taggable_id"
     t.string "tagger_type", limit: 255
     t.bigint "tagger_id"
     t.string "context", limit: 128
-    t.datetime "created_at"
+    t.datetime "created_at", precision: nil
     t.index ["context"], name: "index_taggings_on_context"
     t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
     t.index ["tag_id"], name: "index_taggings_on_tag_id"
@@ -195,23 +191,23 @@ ActiveRecord::Schema[6.1].define(version: 2021_05_04_093108) do
     t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
   end
 
-  create_table "tags", id: :bigint, default: nil, force: :cascade do |t|
+  create_table "tags", force: :cascade do |t|
     t.string "name", limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.bigint "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
-  create_table "technologies", id: :bigint, default: nil, force: :cascade do |t|
+  create_table "technologies", force: :cascade do |t|
     t.string "name", limit: 255
     t.text "description"
     t.string "url", limit: 255
     t.bigint "adoption_level_id", null: false
     t.bigint "readiness_level_id", null: false
     t.bigint "governance_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "slug", limit: 255
     t.text "editorial"
     t.string "roadmap", limit: 255
@@ -231,14 +227,14 @@ ActiveRecord::Schema[6.1].define(version: 2021_05_04_093108) do
     t.index ["status_id"], name: "index_technologies_on_status_id"
   end
 
-  create_table "users", id: :bigint, default: nil, force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", limit: 255, default: "", null: false
     t.string "encrypted_password", limit: 255, default: "", null: false
     t.string "reset_password_token", limit: 255
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "reset_password_sent_at", precision: nil
+    t.datetime "remember_created_at", precision: nil
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.text "forenames"
     t.text "lastname"
     t.text "editorial"
@@ -246,15 +242,15 @@ ActiveRecord::Schema[6.1].define(version: 2021_05_04_093108) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "assignments", "roles", name: "assignments_role_id_fkey"
-  add_foreign_key "assignments", "users", name: "assignments_user_id_fkey"
-  add_foreign_key "dependencies", "technologies", column: "dependee_id", name: "dependencies_dependee_id_fkey"
-  add_foreign_key "dependencies", "technologies", name: "dependencies_technology_id_fkey"
-  add_foreign_key "taggings", "tags", name: "taggings_tag_id_fkey"
-  add_foreign_key "technologies", "adoption_levels", name: "technologies_adoption_level_id_fkey"
-  add_foreign_key "technologies", "business_forms", name: "technologies_business_form_id_fkey"
+  add_foreign_key "assignments", "roles"
+  add_foreign_key "assignments", "users"
+  add_foreign_key "dependencies", "technologies"
+  add_foreign_key "dependencies", "technologies", column: "dependee_id"
+  add_foreign_key "taggings", "tags"
+  add_foreign_key "technologies", "adoption_levels"
+  add_foreign_key "technologies", "business_forms"
   add_foreign_key "technologies", "editorial_states"
-  add_foreign_key "technologies", "governances", name: "technologies_governance_id_fkey"
-  add_foreign_key "technologies", "readiness_levels", name: "technologies_readiness_level_id_fkey"
-  add_foreign_key "technologies", "statuses", name: "technologies_status_id_fkey"
+  add_foreign_key "technologies", "governances"
+  add_foreign_key "technologies", "readiness_levels"
+  add_foreign_key "technologies", "statuses"
 end
